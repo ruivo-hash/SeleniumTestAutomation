@@ -2,11 +2,10 @@ package steps;
 
 import cucumber.api.java.en.Given;
 import pages.HomePage;
-import runner.Test;
 
-public class AccessAutomobileInsuranceSteps  extends Test{
+public class AccessAutomobileInsuranceSteps{
 
-	HomePage home =  new HomePage(driver);
+	HomePage home =  new HomePage();
 	
 	@Given("^that I in home page of Tricents site$")
 	public void thatIInHomePageOfTricentsSite() {

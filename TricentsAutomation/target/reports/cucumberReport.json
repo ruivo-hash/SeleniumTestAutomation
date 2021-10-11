@@ -1,0 +1,136 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: en"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 8,
+        "name": "Fill form to hire a vehicle insurance",
+        "description": "",
+        "id": "hire-vehicle-insurance;fill-form-to-hire-a-vehicle-insurance",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5846879200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "that I in home page of Tricents site",
+            "match": {
+              "location": "AccessAutomobileInsuranceSteps.thatIInHomePageOfTricentsSite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1630844100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "access Automobile Insurance",
+            "match": {
+              "location": "AccessAutomobileInsuranceSteps.accessAutomobileInsurance()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1248483700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I fill form of Vehicle Data",
+            "match": {
+              "location": "HireInsuranceSteps.iFillFormOfVehicleData()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2637063400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "fill form of Insurant Data",
+            "match": {
+              "location": "HireInsuranceSteps.fillFormOfInsurantData()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 943731500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "fill form of Product Data",
+            "match": {
+              "location": "HireInsuranceSteps.fillFormOfProductData()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 732710400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "select a Price Option",
+            "match": {
+              "location": "HireInsuranceSteps.selectAPriceOption()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 661369100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "send a quote",
+            "match": {
+              "location": "HireInsuranceSteps.sendAQuote()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9009686300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I validate the success message",
+            "match": {
+              "location": "HireInsuranceSteps.iValidateTheSuccessMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@fillFormToHireInsurance"
+          }
+        ]
+      }
+    ],
+    "name": "Hire Vehicle Insurance",
+    "description": "I want to hire a vehicle insurance to my car",
+    "id": "hire-vehicle-insurance",
+    "keyword": "Feature",
+    "uri": "HireVehicleInsurance.feature",
+    "tags": [
+      {
+        "line": 3,
+        "name": "@hireVehicleInsurance"
+      }
+    ]
+  }
+]

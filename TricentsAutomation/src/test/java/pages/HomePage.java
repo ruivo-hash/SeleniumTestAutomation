@@ -2,25 +2,19 @@ package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
-public class HomePage{
+import utils.Util;
 
-	WebDriver driver;
-	
-	public HomePage(WebDriver driver) {
-		this.driver = driver;
-	}
+public class HomePage extends Util{
 	
 	private By imgTricents = By.id("tricentis_logo");
 	private By txtAutomobile = By.id("nav_automobile");
 	
 	public void accessTricentisSite() {
-		driver.get("http://sampleapp.tricentis.com/101/index.php");
-		driver.manage().window().maximize();
-		Assert.assertEquals(true, driver.findElement(imgTricents).isDisplayed());
+		getWindow("http://sampleapp.tricentis.com/101/index.php");
+		Assert.assertEquals(true, elementIsDisplayed(imgTricents));
 	}
 	public void clickAutomobileInsurance() {
-		driver.findElement(txtAutomobile).click();
+		clickElement(txtAutomobile);
 	}
 }

@@ -27,11 +27,12 @@ public class HireInsuranceSteps{
 		vehicle.selectFuelType("Gas");
 		vehicle.fillListPrice("50000");
 		vehicle.fillAnnualMileage("10000");
+		vehicle.fillLicensePlateNumber("A1B2C3");
 		vehicle.clickNext();
 	}
 
 	@When("^fill form of Insurant Data$")
-	public void fillFormOfInsurantData() {
+	public void fillFormOfInsurantData() throws Exception {
 		insurant.fillFirstName("Mateus");
 		insurant.fillLastName("Balduino");
 		insurant.fillBirthDate("01/16/2001");
@@ -43,6 +44,7 @@ public class HireInsuranceSteps{
 		insurant.selectOccupation("Employee");
 		insurant.selectHobbies();
 		insurant.fillWebsite("https://github.com/ruivo-hash");
+		insurant.uploadPicture();
 		insurant.clickNext();
 	}
 

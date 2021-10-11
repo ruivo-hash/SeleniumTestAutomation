@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 
-import Utils.Util;
+import utils.Util;
 
 public class ProductDataPage extends Util{
 

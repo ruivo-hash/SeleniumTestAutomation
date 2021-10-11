@@ -3,30 +3,27 @@ package runner;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import utils.ChromeDriverUtil;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {},
+		plugin = {"json:target/reports/cucumberReport.json", "html:target/reports"},
 		features = "src/test/resources/features",
 		tags = {"@fillFormToHireInsurance"},
 		glue = {"steps"}
 )
 public class Test {
-
-	protected static WebDriver driver;
 	
 	@BeforeClass
 	public static void start() {
-		driver = new ChromeDriver();
+		ChromeDriverUtil.InitializeChromeDriver();
 	}
 	
 	@AfterClass
 	public static void stop() {
-		driver.quit();
+		ChromeDriverUtil.closeWindow();
 	}
 }

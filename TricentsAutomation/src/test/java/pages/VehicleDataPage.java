@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 
-import Utils.Util;
+import utils.Util;
 
 public class VehicleDataPage extends Util{
 	
@@ -15,6 +15,7 @@ public class VehicleDataPage extends Util{
 	private By slcSeats = By.id("numberofseats");
 	private By slcFuelType = By.id("fuel");
 	private By inputListPrice = By.id("listprice");
+	private By inputLicensePlateNumber = By.id("licenseplatenumber");
 	private By inputAnnualMileage = By.id("annualmileage");
 	private By btnNext = By.id("nextenterinsurantdata");
 	
@@ -39,6 +40,9 @@ public class VehicleDataPage extends Util{
 	}
 	public void fillListPrice(String price) {
 		sendKeys(inputListPrice, price);
+	}
+	public void fillLicensePlateNumber(String license) {
+		sendKeys(inputLicensePlateNumber, license);
 	}
 	public void fillAnnualMileage(String mileage) {
 		sendKeys(inputAnnualMileage, mileage);

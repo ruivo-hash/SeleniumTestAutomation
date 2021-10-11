@@ -1,8 +1,12 @@
 package pages;
 
+import java.awt.Robot;
+
 import org.openqa.selenium.By;
 
-import Utils.Util;
+import static java.awt.event.KeyEvent.*;
+import utils.RobotWrite;
+import utils.Util;
 
 public class InsurantDataPage extends Util{
 
@@ -61,6 +65,20 @@ public class InsurantDataPage extends Util{
 	}
 	public void fillWebsite(String website) {
 		sendKeys(inputWebsite, website);
+	}
+	public void uploadPicture() throws Exception {
+		clickElement(btnOpenPicture);
+		Thread.sleep(1000);
+		try{
+	        RobotWrite rw = new RobotWrite();
+	        rw.type("userPicture");
+	        Robot r = new Robot();
+	        r.keyPress(VK_ENTER);
+	        r.keyRelease(VK_ENTER);
+	    }catch (Exception e){
+	        System.out.println("Could not write");
+	        throw(e);
+	    }
 	}
 	public void clickNext() {
 		clickElement(btnNext);

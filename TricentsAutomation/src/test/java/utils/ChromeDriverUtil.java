@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,5 +9,8 @@ public class ChromeDriverUtil {
 	
 	public static void InitializeChromeDriver() {
 		driver = new ChromeDriver();
+	}
+	public static void closeWindow() {
+		driver.quit();
 	}
 }

@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,15 +6,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import runner.Test;
+public class Util extends ChromeDriverUtil{
 
-public class Util extends Test{
-
-	public Util() {}
+	public void getWindow(String url) {
+		driver.get(url);
+		driver.manage().window().maximize();
+	}
 	
-	 public void waitElementBePresent(By element , int time){
-	        WebDriverWait wait = new WebDriverWait(driver, time);
-	        wait.until(ExpectedConditions.elementToBeClickable(element));
+	public void waitElementBePresent(By element , int time){
+        WebDriverWait wait = new WebDriverWait(driver, time);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	 
 	 public void scrollDown() throws InterruptedException {
@@ -22,6 +23,9 @@ public class Util extends Test{
         jse.executeScript("window.scrollTo(0, 1000)");
     }
 	
+	 public boolean elementIsDisplayed(By element) {
+		 return driver.findElement(element).isDisplayed();
+	 }
 	public void clickElement(By element) {
 		driver.findElement(element).click();
 	}
